@@ -1,7 +1,7 @@
 [project]
 name = "dynamicinputbox"
 version = "1.3"
-description = "Creates a dynamic inputbox with the possisiblity to add inputboxes and/or alternatives"
+description = "Creates a dynamic messagebox with the possisiblity to add inputboxes and/or alternatives"
 authors = [{ name="Smorkster", email="smorkster@gmail.com" }]
 readme = "README.md"
 license = {text = "MIT"}
