@@ -117,7 +117,7 @@ class dynamic_inputbox():
         self.show()
 
     def cancel( self ):
-        """ Cancels the dialog and closing the window. """
+        """ Cancels the dialog, sets default values and closing the window. """
         self._inputtext = { 'inputs': [], 'alternatives': [] }
         self._clicked_button = 'Aborted'
         self._master.destroy()
