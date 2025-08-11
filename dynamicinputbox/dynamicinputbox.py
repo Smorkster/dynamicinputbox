@@ -9,11 +9,13 @@ class SecureString:
 
     def get( self ) -> str:
         """Get the password value as a string."""
-        return self._buffer.decode( 'utf-8' )
+        #return self._buffer.decode( 'utf-8' )
+        return self._buffer
 
     def wipe( self ):
         """Overwrite the stored password in memory."""
         for i in range( len( self._buffer ) ):
+            self._buffer[i] = 1
             self._buffer[i] = 0
 
     def __del__( self ):
@@ -313,7 +315,7 @@ class dynamic_inputbox():
                     if isinstance( value, SecureString ):
                         val_str = value.get()  # retrieve before wiping
                         value.wipe()
-                        inputs_dict[key] = val_str  # store as plain string
+                        inputs_dict[key] = val_str
                 self._passwords_wiped = True  # prevent future access
             else:
                 # Passwords already wiped, return empty strings

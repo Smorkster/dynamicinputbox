@@ -34,6 +34,8 @@ the user to respond via custom buttons.
 ## Returns
 The class itself does not return a value upon instantiation.
 
+For input entered where `show` has been defined, the value will be returned as clear text, but in a bytearray to keep it better secured.
+
 To access the user's input after the dialog closes, use the `get()` method.
 
 **get( dictionary = False )** returns a tuple:
