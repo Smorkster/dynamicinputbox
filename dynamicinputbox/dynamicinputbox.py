@@ -146,7 +146,6 @@ class dynamic_inputbox():
         if button is not None:
             self._clicked_button = button
 
-        self.firstentry.delete( 0, 'end' )
         self._master.destroy()
 
     def preset_keypress( self, event ):
